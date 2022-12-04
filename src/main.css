@@ -1,25 +1,12 @@
 @import url("./styles/global.css");
+@import url("./styles/font.css");
+@import url("./styles/components/page.css");
+
 @import url("./components/web-app/web-app.style.css");
-
-@font-face {
-  font-family: "Ubuntu";
-  src: url("./fonts/Ubuntu-Regular.ttf");
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "Ubuntu";
-  src: url("./fonts/Ubuntu-Medium.ttf");
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: "Ubuntu";
-  src: url("./fonts/Ubuntu-Bold.ttf");
-  font-weight: 700;
-}
+@import url("./components/web-step/web-step.style.css");
 
 :root {
+  --color-background: hsl(218, 100%, 97%);
   --color-marine-blue: hsl(213, 96%, 18%);
   --color-purplish-blue: hsl(243, 100%, 62%);
   --color-pastel-blue: hsl(228, 100%, 84%);

@@ -26,7 +26,7 @@
   <meta property="twitter:image" content="https://john-mirage-frontend-mentor-multi-step-form.vercel.app/preview.jpg">
 </head>
 
-<body>
+<body class="page">
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <!-- icons -->
   <svg class="page__icons" xmlns="http://www.w3.org/2000/svg">
@@ -61,10 +61,32 @@
   </svg>
 
   <!-- app -->
-  <div id="app"></div>
+  <div class="page__app" id="app"></div>
 
   <!-- template | web app -->
-  <template id="template-web-app"></template>
+  <template id="template-web-app">
+    <header class="web-app__header">
+      <ul class="web-app__stepper">
+        <li class="web-app__stepper-item" is="web-step" data-number="1" data-name="your info" data-active></li>
+        <li class="web-app__stepper-item" is="web-step" data-number="2" data-name="select plan"></li>
+        <li class="web-app__stepper-item" is="web-step" data-number="3" data-name="add-ons"></li>
+        <li class="web-app__stepper-item" is="web-step" data-number="4" data-name="summary"></li>
+      </ul>
+    </header>
+    <div class="web-app__body">
+      <main class="web-app__view"></main>
+      <footer class="web-app__footer"></footer>
+    </div>
+  </template>
+
+  <!-- template | web step -->
+  <template id="template-web-step">
+    <div class="web-step__number"></div>
+    <div class="web-step__text">
+      <h3 class="web-step__title" data-js="title"></h3>
+      <p class="web-step__name" data-js="name"></p>
+    </div>
+  </template>
 
   <script type="module" src="/src/main.ts"></script>
 </body>

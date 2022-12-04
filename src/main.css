@@ -1,0 +1,9 @@
+@import url("./styles/global.css");
+
+@import url("./components/web-app/web-app.style.css");
+
+:root {
+  --color-background: hsl(210, 11%, 15%);
+  --color-heading: hsl(162, 73%, 46%);
+  --color-body: hsl(210, 14%, 89%);
+}

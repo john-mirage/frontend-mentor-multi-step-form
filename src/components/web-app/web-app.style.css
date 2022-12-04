@@ -1,0 +1,9 @@
+.web-app {
+  display: block;
+}
+
+.web-app__title {
+  font-family: system-ui;
+  font-size: 40px;
+  color: var(--color-heading);
+}

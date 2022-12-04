@@ -1,0 +1,27 @@
+.web-step {
+  display: block;
+}
+
+.web-step__number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 33px;
+  height: 33px;
+  border-radius: 9999px;
+  border: 1px solid var(--color-white);
+  color: var(--color-white);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.web-step__text {
+  display: none;
+}
+
+.web-step[data-active] > .web-step__number {
+  border: none;
+  color: var(--color-marine-blue);
+  background-color: var(--color-light-blue);
+}

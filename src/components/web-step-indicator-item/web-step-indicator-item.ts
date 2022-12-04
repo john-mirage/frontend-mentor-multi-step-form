@@ -1,6 +1,4 @@
-const ACTIVE_CLASSNAME = "web-step--active";
-
-class WebStep extends HTMLLIElement {
+class WebStepIndicatorItem extends HTMLLIElement {
   #hasBeenMountedOnce = false;
   #numberElement;
   #textElement;
@@ -13,7 +11,7 @@ class WebStep extends HTMLLIElement {
 
   constructor() {
     super();
-    const template = <HTMLTemplateElement>document.getElementById("template-web-step");
+    const template = <HTMLTemplateElement>document.getElementById("template-web-step-indicator-item");
     this.#numberElement = <HTMLDivElement>(<HTMLDivElement>template.content.firstElementChild).cloneNode(true);
     this.#textElement = <HTMLDivElement>(<HTMLDivElement>template.content.lastElementChild).cloneNode(true);
     this.#titleElement = <HTMLDivElement>this.#textElement.querySelector('[data-js="title"]');
@@ -64,16 +62,6 @@ class WebStep extends HTMLLIElement {
     }
   }
 
-  handleActiveState(isActive: boolean) {
-    if (isActive) {
-      if (!this.classList.contains(ACTIVE_CLASSNAME)) {
-        this.classList.add(ACTIVE_CLASSNAME);
-      }
-    } else if (this.classList.contains(ACTIVE_CLASSNAME)) {
-      this.classList.remove(ACTIVE_CLASSNAME);
-    }
-  }
-
   attributeChangedCallback(name: string, _oldValue: string | undefined, newValue: string | undefined) {
     switch (name) {
       case "data-number": {
@@ -85,12 +73,8 @@ class WebStep extends HTMLLIElement {
         this.#nameElement.textContent = newValue ?? null;
         break;
       }
-      case "data-active": {
-        this.handleActiveState(typeof newValue === "string");
-        break;
-      }
     }
   }
 }
 
-export default WebStep;
+export default WebStepIndicatorItem;

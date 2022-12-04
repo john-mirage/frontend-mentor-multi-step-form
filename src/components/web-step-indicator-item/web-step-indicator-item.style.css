@@ -20,7 +20,7 @@
   display: none;
 }
 
-.web-step--active > .web-step__number {
+.web-step[data-active] > .web-step__number {
   border: none;
   color: var(--color-marine-blue);
   background-color: var(--color-light-blue);

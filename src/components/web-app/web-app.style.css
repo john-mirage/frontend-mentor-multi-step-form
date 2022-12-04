@@ -17,20 +17,6 @@
   background-size: cover;
 }
 
-.web-app__stepper {
-  margin-left: -8px;
-  margin-right: -8px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.web-app__stepper-item {
-  margin-left: 8px;
-  margin-right: 8px;
-}
-
 .web-app__body {
   flex: 1;
   display: flex;
@@ -39,18 +25,15 @@
   align-items: center;
 }
 
-.web-app__view {
-  margin-bottom: 32px;
+.web-app__step-view {
+  margin-bottom: 24px;
   transform: translateY(-73px);
   width: calc(100% - 32px);
   max-width: 940px;
   height: 376px;
-  border-radius: 10px;
-  background-color: var(--color-white);
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.08);
 }
 
-.web-app__footer {
+.web-app__step-pagination {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;

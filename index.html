@@ -66,27 +66,59 @@
   <!-- template | web app -->
   <template id="template-web-app">
     <header class="web-app__header">
-      <ul class="web-app__stepper">
-        <li class="web-app__stepper-item" is="web-step" data-number="1" data-name="your info" data-active></li>
-        <li class="web-app__stepper-item" is="web-step" data-number="2" data-name="select plan"></li>
-        <li class="web-app__stepper-item" is="web-step" data-number="3" data-name="add-ons"></li>
-        <li class="web-app__stepper-item" is="web-step" data-number="4" data-name="summary"></li>
-      </ul>
+      <web-step-indicator></web-step-indicator>
     </header>
     <div class="web-app__body">
-      <main class="web-app__view"></main>
-      <footer class="web-app__footer"></footer>
+      <web-step-view class="web-app__step-view"></web-step-view>
+      <web-step-pagination class="web-app__step-pagination"></web-step-pagination>
     </div>
   </template>
 
-  <!-- template | web step -->
-  <template id="template-web-step">
-    <div class="web-step__number"></div>
-    <div class="web-step__text">
-      <h3 class="web-step__title" data-js="title"></h3>
-      <p class="web-step__name" data-js="name"></p>
+  <!-- template | web step indicator -->
+  <template id="template-web-step-indicator">
+    <ul class="web-step-indicator__list">
+      <li class="web-step-indicator__list-item">
+        <web-step-indicator-item data-number="1" data-name="your info"></web-step-indicator-item>
+      </li>
+      <li class="web-step-indicator__list-item">
+        <web-step-indicator-item data-number="2" data-name="select plan"></web-step-indicator-item>
+      </li>
+      <li class="web-step-indicator__list-item">
+        <web-step-indicator-item data-number="3" data-name="add-ons"></web-step-indicator-item>
+      </li>
+      <li class="web-step-indicator__list-item">
+        <web-step-indicator-item data-number="4" data-name="summary"></web-step-indicator-item>
+      </li>
+    </ul>
+  </template>
+
+  <!-- template | web step indicator item -->
+  <template id="template-web-step-indicator-item">
+    <div class="web-step-indicator-item__number"></div>
+    <div class="web-step-indicator-item__text">
+      <h3 class="web-step-indicator-item__title" data-js="title"></h3>
+      <p class="web-step-indicator-item__name" data-js="name"></p>
     </div>
   </template>
+
+  <!-- template | web step view -->
+  <template id="template-web-step-view">
+    <main class="web-step-view__container">
+      <h2 class="web-step-view__title" data-js="title"></h2>
+      <p class="web-step-view__subtitle" data-js="subtitle"></p>
+    </main>
+  </template>
+
+  <!-- template | web step pagination -->
+  <template id="template-web-step-pagination">
+    <footer class="web-step-pagination__container"></footer>
+  </template>
+
+  <!-- template | web step pagination button -->
+  <template id="template-web-step-pagination-button">
+    <button class="web-step-pagination-button__container"></button>
+  </template>
+
 
   <script type="module" src="/src/main.ts"></script>
 </body>

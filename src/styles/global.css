@@ -29,7 +29,6 @@ body {
   min-height: 100vh;
   text-rendering: optimizespeed;
   line-height: 1.5;
-  background-color: var(--color-background);
 }
 
 a {
